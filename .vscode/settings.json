@@ -1,0 +1,41 @@
+{
+  "configurations": [
+      {
+          "name": "Win32",
+          "includePath": [
+              "${workspaceRoot}",
+              "${workspaceRoot}/src/",
+              "C:/include" 
+          ],
+          "browse": {
+              "path": [
+                  "${workspaceRoot}",
+                  "${workspaceRoot}/src/",
+                  "C:/include"
+              ],
+              "limitSymbolsToIncludedHeaders": true,
+              "databaseFilename": ""
+          }
+      },
+      {
+          "name": "Linux",
+          "compilerPath": "/usr/bin/g++",
+          "intelliSenseMode": "gcc-x64",
+          "includePath": [
+              "${workspaceRoot}/cpp/src",
+              "${workspaceRoot}/cpp/include",
+              "${workspaceRoot}/cpp/3rd"
+          ],
+          "browse": {
+              "path": [
+                  "${workspaceRoot}/cpp/src",
+                  "${workspaceRoot}/cpp/include",
+                  "${workspaceRoot}/cpp/3rd"
+              ],
+              "limitSymbolsToIncludedHeaders": true,
+              "databaseFilename": ""
+          }
+      }
+  ],
+  "version": 4
+}

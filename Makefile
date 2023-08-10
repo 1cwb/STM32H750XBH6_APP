@@ -46,7 +46,7 @@ CXX_COMPILE_FLAGS 	:= -lc -lm -lnosys  -std=c++11 -fno-exceptions -fno-builtin -
 
 ASM_COMPILE_FLAGS 	:= -x assembler-with-cpp -Wa,-mimplicit-it=thumb
 #################################################################################################
-EXTRA_LINK_FLAGS	:= -g -gdwarf-2 -lc -lm -lnosys -T$(LINK_FILES) \
+EXTRA_LINK_FLAGS	:= -g -gdwarf-2 -lc -lm -lnosys -lstdc++ -T$(LINK_FILES) \
 						-Wl,-Map=$(OUTPUTDIR)/$(TARGET).map,--cref,--no-warn-mismatch \
 						-specs=nano.specs -specs=nosys.specs
 
@@ -90,7 +90,7 @@ $(OUTPUTDIR)/$(TARGET).elf:$(OBJS)
 	$(OBJCOPY) -O binary -S $(OUTPUTDIR)/$(TARGET).elf $(OUTPUTDIR)/$(TARGET).bin
 	$(OBJDUMP) -D -m arm $(OUTPUTDIR)/$(TARGET).elf > $(OUTPUTDIR)/$(TARGET).dis
 	$(SIZEINFO) $@
-	cp output/$(TARGET).bin /mnt/d/STM32/
+	cp output/$(TARGET).bin /mnt/e/STM32/
 	sync
 
 $(SOBJS) : $(OUTPUTDIR)/%.o : %.s
